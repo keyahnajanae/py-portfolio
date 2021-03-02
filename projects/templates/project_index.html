@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+    {% load static %}
+    {% block page_content %}
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+  
+
+    <title>Carousel Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/carousel.css' %}" rel="stylesheet">
+  </head>
+  <body>
+  
+
+    <main role="main">
+
+     
+
+
+      <!-- Marketing messaging and featurettes
+      ================================================== -->
+      <!-- Wrap the rest of the page in another container to center all the content. -->
+
+      <div class="container marketing">
+
+        <!-- Three columns of text below the carousel -->
+        
+            <div id="projects" class="row">
+                {% for project in projects %}
+                    <div class="col-md-4">
+                         <div class="card mb-2">
+                          <img class="card-img-top" src="{% static project.image %}">
+                         <div class="card-body">
+                              <h5 class="card-title">{{ project.title }}</h5>
+                               <p class="card-text">{{ project.description }}</p>
+                               <a href="{% url 'project_detail' project.pk %}"
+                                  class="btn btn-primary">
+                                     View Details
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+        
+
+
+        <!-- START THE FEATURETTES -->
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">Wayfarer Project | <span class="text-muted">Django meets Python - A True Love Story</span></h2>
+            <p class="lead">Wayfarer was a team collaborated project utilizing Python with Django and incorporating HTML and CSS for the front end. We created several models including a new superuser form along with adding extra security for viewing important parts of the website</p>
+          </div>
+          <div class="col-md-5">
+            <img class="featurette-image img-fluid mx-auto" src="https://dm2306files.storage.live.com/y4mKwiJTjDaHgRWaHplfCegQjlRMmA8WXlJhz8vEn472aw6B04DYaPryxqWAnUJXwRvpksY3QG_3jssRS79YHdlRAs5vGXak6JxcViPug5zBeAfju-VKyQQN9X9DFgbc1Y10sYSAwYa7Km5J6sodCigg1ZfW8PBaVKzl5jD3fMuqG0rOsWRFvQIO4mSIRCCTL4F?width=660&height=558&cropmode=none" alt="wayfarer">
+            <button type="button" class="btn btn-primary"><a class='btn-web' href="https://github.com/keyahnajanae/Wayfarer">Look at Code</a></button>  
+
+            <button type="button" class="btn btn-secondary"><a class='btn-web' href="https://wayfarer-group.herokuapp.com">Look at Website</a></button>  
+            
+            
+         
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading">Kelp Review App | <span class="text-muted">A Yelp Knockoff.</span></h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          </div>
+          <div class="col-md-5 order-md-1">
+            <img class="featurette-image img-fluid mx-auto" src="https://dm2306files.storage.live.com/y4mOEkQthI-2bFFTliEBFZVFkpiLffDUxLrCxzoF8KwIG3Y4jfALCJFAJL4a96r-lO1VwD9qmhCrmFn49dipN1LJGAYdUyOH3iNl7Pg_r1WG4z8vze9vBVno9GHRuPAcQRv5l3dv1J4YZb8tEPUnh_vRBSeIRtEBio5NFjJHFVx2exypW14Q_OFuhBpVfUqh_Kg?width=660&height=414&cropmode=none" alt="Kelp">
+            <button type="button" class="btn btn-primary"><a class='btn-web' href="https://github.com/keyahnajanae/Kelp-App-Project-1">Look at Code</a></button>  
+
+            <button type="button" class="btn btn-secondary"><a class='btn-web' href="https://kelpsei.herokuapp.com">Look at Website</a></button>  
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">ATL LUX  | <span class="text-muted">Real Estate App.</span></h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          </div>
+          <div class="col-md-5">
+            <img class="featurette-image img-fluid mx-auto" src="https://dm2306files.storage.live.com/y4mwCraD_1cw-uEWsSdk34o3qxd-7fN5X7V04VvRl2weNyrw9gGvx3igPfc_k1J_t1DXHAY7pbY_ZShxI1FFIBfqttf8WSpQAhcUQkJot8vbOeVAB3NINp2wnccGa_i28S9KXv3e8BRkkcf26GfY0u__NAmAPFbDki2M3ZYVQKvZwZOLpqJsZ5JL1wVfGagFK6g?width=660&height=331&cropmode=none" alt="ATL Lux">
+            <button type="button" class="btn btn-primary"><a class='btn-web' href="https://github.com/keyahnajanae/atl-lux-client">Look at Code | Client</a></button>  
+            <button type="button" class="btn btn-primary"><a class='btn-web' href="https://github.com/keyahnajanae/atl-lux-api-">Look at Code | Server</a></button> 
+
+            <button type="button" class="btn btn-secondary"><a class='btn-web' href="https://atl-lux.herokuapp.com/atl-lux/">Look at Website</a></button>  
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <!-- /END THE FEATURETTES -->
+
+      </div><!-- /.container -->
+
+
+    </main>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../../../dist/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="../../../../assets/js/vendor/holder.min.js"></script>
+  </body>
+</html>
+{% endblock %}

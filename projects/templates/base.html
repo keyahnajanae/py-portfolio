@@ -1,0 +1,31 @@
+{% load static %}
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../../../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+
+<link rel="stylesheet" href="{% static 'css/nav.css'%}">
+
+<!-- Header -->
+  <header class="header">
+    <a href="{% url 'home_page' %}" class="logo">Keyahna Janae</a>
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    <ul class="menu">
+      <li><a href="{%url 'project_index' %}">Projects | Experience</a></li>
+      <li><a href="{%url 'summary_page' %}">Summary | About Me</a></li>
+      <li><a href="https://docs.google.com/document/d/1-P6EtR3is9gGO4WwKSyHZ3wWvL8-V42P95EuTRisq60/edit#">Resume</a></li>
+    </ul>
+  </header>
+
+
+
+{% block page_content %}{% endblock %}
+
