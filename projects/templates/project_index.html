@@ -30,16 +30,14 @@
 
       <!-- Marketing messaging and featurettes
       ================================================== -->
-      <!-- Wrap the rest of the page in another container to center all the content. -->
+
 
       <div class="container marketing">
-
-        <!-- Three columns of text below the carousel -->
         
-            <div id="projects" class="row">
+            <div class="row">
                 {% for project in projects %}
-                    <div class="col-md-4">
-                         <div class="card mb-2">
+                    <div id="projects" class="col-md-4">
+                         <div id="imgg" class="card mb-2">
                           <img class="card-img-top" src="{% static project.image %}">
                          <div class="card-body">
                               <h5 class="card-title">{{ project.title }}</h5>
@@ -81,7 +79,7 @@
         <div class="row featurette">
           <div class="col-md-7 order-md-2">
             <h2 class="featurette-heading">Kelp Review App | <span class="text-muted">A Yelp Knockoff.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            <p class="lead">Kelp was made using bcrypt hashing for secure registration/logins and including full CRUD functionaility for our model. EJS was used to render objects from Mongodb as HTML, moreover RESTful routes were utilized in order to build this express application and bring online via Heroku Deployment.</p>
           </div>
           <div class="col-md-5 order-md-1">
             <img class="featurette-image img-fluid mx-auto" src="https://dm2306files.storage.live.com/y4mOEkQthI-2bFFTliEBFZVFkpiLffDUxLrCxzoF8KwIG3Y4jfALCJFAJL4a96r-lO1VwD9qmhCrmFn49dipN1LJGAYdUyOH3iNl7Pg_r1WG4z8vze9vBVno9GHRuPAcQRv5l3dv1J4YZb8tEPUnh_vRBSeIRtEBio5NFjJHFVx2exypW14Q_OFuhBpVfUqh_Kg?width=660&height=414&cropmode=none" alt="Kelp">
@@ -96,7 +94,7 @@
         <div class="row featurette">
           <div class="col-md-7">
             <h2 class="featurette-heading">ATL LUX  | <span class="text-muted">Real Estate App.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            <p class="lead">ATL LUX was my very first individual FULL STACK APP ! This real estate application was created using React for the front-end and Mongo as back-end API, utilizing AJAX to retrieve data from the backend server! Cross-Origin Resource Sharing or CORS allows the restricted data from the back end domain to be rendered to the front end domain, ultimately connecting the two servers.   </p>
           </div>
           <div class="col-md-5">
             <img class="featurette-image img-fluid mx-auto" src="https://dm2306files.storage.live.com/y4mwCraD_1cw-uEWsSdk34o3qxd-7fN5X7V04VvRl2weNyrw9gGvx3igPfc_k1J_t1DXHAY7pbY_ZShxI1FFIBfqttf8WSpQAhcUQkJot8vbOeVAB3NINp2wnccGa_i28S9KXv3e8BRkkcf26GfY0u__NAmAPFbDki2M3ZYVQKvZwZOLpqJsZ5JL1wVfGagFK6g?width=660&height=331&cropmode=none" alt="ATL Lux">

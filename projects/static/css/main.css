@@ -27,7 +27,7 @@ a:focus,
 html,
 body {
   height: 100%;
-  background-color: #333;
+  background-color: #333 cover;
 }
 
 body {
@@ -55,16 +55,18 @@ body {
 
 ul {
     list-style: none;
+    
 }
 
-ul .icons {
+.icons {
    
     margin-bottom: 2em;
 
     
 }
 
-.wp-icon {
+
+/* .wp-icon ul {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -74,9 +76,8 @@ ul .icons {
   color: #fff;
   margin: 2em 0 0 5em;
   
-}
+} */
 
 
-.wp-icon:hover{
-    color: blue;
-}
+
+

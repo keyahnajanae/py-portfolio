@@ -2,30 +2,40 @@
 # About Me
 --------------------------------------------------------------*/
 
+.about-me{
+    margin: 3em;
+    line-height: 1.5em;;
+}
+.references{
+    margin: 3em;
+    line-height: 1.5em;;
+}
+
+
 .about .content h3 {
     
     font-weight: 700;
     font-size: 26px;
-    color: #3b434a;
+    color: #8ec3f1;
     text-transform: uppercase;
-  }
-  
-  .about .content ul {
+}
+
+.about .content ul {
     list-style: none;
     padding: 0;
-  }
-  
-  .about .content ul li {
+}
+
+.about .content ul li {
     margin-bottom: 20px;
     display: flex;
     align-items: center;
-  }
-  
-  .about .content ul strong {
+}
+
+.about .content ul strong {
     margin-right: 10px;
-  }
-  
-  .about .content ul i {
+}
+
+.about .content ul i {
     font-size: 16px;
     margin-right: 5px;
     color: #ffb727;
@@ -53,7 +63,7 @@
     line-height: 30px;
     display: block;
     font-weight: 700;
-    color: #3b434a;
+    color: #8ec3f1;
     margin-left: 50px;
   }
   
@@ -76,12 +86,13 @@
   }
   
   .about .content .count-box a:hover {
-    color: #82909c;
+    color: #8ec3f1;
   }
   
   .about .image {
-    background: url("../img/IMG_6878.png") center center no-repeat;
-    min-height: 500px;
+    background: url("../img/IMG_6878.png") center top no-repeat;
+    min-height: 600px;
+    
   }
   
   .about .skills-content {
