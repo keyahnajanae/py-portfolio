@@ -9,11 +9,13 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-
+import os
 from pathlib import Path
+from boto.s3.connection import S3Connection
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
 # Quick-start development settings - unsuitable for production
@@ -25,7 +27,7 @@ SECRET_KEY = '4ro6u!ix9*%co)4zi$4p-*p#v_qzr=unhkxqf$_t25^c0=jbph'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ec2-34-203-255-149.compute-1.amazonaws.com', 'localhost']
 
 
 # Application definition
@@ -87,8 +89,13 @@ WSGI_APPLICATION = 'personal_portfolio.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'py-portfolio',
+        'HOST': 'ec2-34-203-255-149.compute-1.amazonaws.com',
+        'USER': 'gbmyiwtjvfeygh',
+        'PASSWORD': '1d79c05c8a98a44230e8e37e19be7c2a2258dd1d38b4d186187c7c87ed90782a',
+        'PORT': 5432
+
     }
 }
 
