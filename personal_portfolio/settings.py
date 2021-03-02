@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 import os
 from pathlib import Path
-from boto.s3.connection import S3Connection
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -87,15 +87,22 @@ WSGI_APPLICATION = 'personal_portfolio.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'personal_portfolio',
+#         'HOST': 'ec2-34-203-255-149.compute-1.amazonaws.com',
+#         'USER': 'gbmyiwtjvfeygh',
+#         'PASSWORD': '1d79c05c8a98a44230e8e37e19be7c2a2258dd1d38b4d186187c7c87ed90782a',
+#         'PORT': 5432
+
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'py-portfolio',
-        'HOST': 'ec2-34-203-255-149.compute-1.amazonaws.com',
-        'USER': 'gbmyiwtjvfeygh',
-        'PASSWORD': '1d79c05c8a98a44230e8e37e19be7c2a2258dd1d38b4d186187c7c87ed90782a',
-        'PORT': 5432
-
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
